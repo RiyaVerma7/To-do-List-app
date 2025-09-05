@@ -1,0 +1,51 @@
+/* --- Base & Font Styles --- */
+:root {
+  --bg-color: #f8f9fa;
+  --card-bg-color: #ffffff;
+  --text-color-primary: #212529;
+  --text-color-secondary: #6c757d;
+  --border-color: #e9ecef;
+  --input-bg-color: #f1f3f5;
+  --hover-bg-color: #f8f9fa;
+  --active-filter-bg: #ffffff;
+  --active-filter-text: #2563eb;
+  --scrollbar-track: #e9ecef;
+  --scrollbar-thumb: #ced4da;
+  --scrollbar-thumb-hover: #adb5bd;
+}
+
+html.dark {
+  --bg-color: #121212;
+  --card-bg-color: #1e1e1e;
+  --text-color-primary: #e9ecef;
+  --text-color-secondary: #adb5bd;
+  --border-color: #343a40;
+  --input-bg-color: #2c2c2c;
+  --hover-bg-color: #2c2c2c;
+  --active-filter-bg: #2563eb;
+  --active-filter-text: #ffffff;
+  --scrollbar-track: #2c2c2c;
+  --scrollbar-thumb: #495057;
+  --scrollbar-thumb-hover: #6c757d;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar */
+#taskList::-webkit-scrollbar { width: 6px; }
+#taskList::-webkit-scrollbar-track { background: var(--scrollbar-track); border-radius: 10px; }
+#taskList::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 10px; }
+#taskList::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
+
+/* Task Item */
+.task-item { border-bottom: 1px solid var(--border-color); transition: 0.2s; }
+.task-item.completed .task-text { text-decoration: line-through; color: var(--text-color-secondary); }
+
+/* Modal */
+.modal-hidden .modal-backdrop { opacity: 0; }
+.modal-hidden .modal-content { transform: translateY(-20px); opacity: 0; }
